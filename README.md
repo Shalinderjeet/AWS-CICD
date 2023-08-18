@@ -31,25 +31,6 @@ In this step, we'll configure AWS CodeBuild to build our Python application base
 
 Fantastic! With AWS CodeBuild all set up, we're now ready to witness the magic of continuous integration in action.
 
-## Create an AWS CodePipeline
-In this step, we'll create an AWS CodePipeline to automate the continuous integration process for our Python application. AWS CodePipeline will orchestrate the flow of changes from our GitHub repository to the deployment of our application. Let's go ahead and set it up:
-
-- Go to the AWS Management Console and navigate to the AWS CodePipeline service.
-- Click on the "Create pipeline" button.
-- Provide a name for your pipeline and click on the "Next" button.
-- For the source stage, select "GitHub" as the source provider.
-- Connect your GitHub account to AWS CodePipeline and select your repository.
-- Choose the branch you want to use for your pipeline.
-- In the build stage, select "AWS CodeBuild" as the build provider.
-- Create a new CodeBuild project by clicking on the "Create project" button.
-- Configure the CodeBuild project with the necessary settings for your Python application, such as the build environment,  build commands, and artifacts.
-- Save the CodeBuild project and go back to CodePipeline.
-- Continue configuring the pipeline stages, such as deploying your application using AWS Elastic Beanstalk or any other suitable deployment option.
-- Review the pipeline configuration and click on the "Create pipeline" button to create your AWS CodePipeline.
-
-Awesome job! We now have our pipeline ready to roll.
-
-
 ## Trigger the CI Process
 
 In this final step, we'll trigger the CI process by making a change to our GitHub repository. Let's see how it works:
@@ -75,4 +56,19 @@ Choose AWS CodeDeploy service
 - appspec.yaml has to be at the root of your repository.
 - install docker on EC2 instance.
 
-AWS Continuous Integration Demo
+## Create an AWS CodePipeline
+In this step, we'll create an AWS CodePipeline to automate the continuous integration process for our Python application. AWS CodePipeline will orchestrate the flow of changes from our GitHub repository to the deployment of our application. Let's go ahead and set it up:
+
+- Go to the AWS Management Console and navigate to the AWS CodePipeline service.
+- Click on the "Create pipeline" button.
+- Provide a name for your pipeline and click on the "Next" button.
+- For the source stage, select "GitHub" as the source provider.
+- Connect your GitHub account to AWS CodePipeline and select your repository.
+- Choose the branch you want to use for your pipeline.
+- In the build stage, select "AWS CodeBuild" as the build provider.
+- Choose CodeBuild project.
+- Save the CodeBuild project and click on add stage.
+- Choose action provider as Code Deploy with name, choose application name,deployment group and click DONE..
+- Review the pipeline configuration and click on the "Create pipeline" button to create your AWS CodePipeline.
+
+Awesome job! We now have our pipeline ready to roll.
