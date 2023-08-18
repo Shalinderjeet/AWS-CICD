@@ -73,5 +73,6 @@ Choose AWS CodeDeploy service
 - create deployment group
 - Now create the Deployment for your application->(name, your application is hosted on GitHub,create deployment done)
 - appspec.yaml has to be at the root of your repository.
+- install docker on EC2 instance.
 
 AWS Continuous Integration Demo
