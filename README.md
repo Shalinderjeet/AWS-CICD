@@ -59,3 +59,19 @@ In this final step, we'll trigger the CI process by making a change to our GitHu
 - Head over to the AWS CodePipeline console and navigate to your pipeline.
 - You should see the pipeline automatically kick off as soon as it detects the changes in your repository.
 - Sit back and relax while AWS CodePipeline takes care of the rest. It will fetch the latest code, trigger the build process with AWS CodeBuild, and deploy the application if you configured the deployment stage.
+
+## AWS Continuous Deployment Demo using AWS CodeDeploy
+
+Choose AWS CodeDeploy service
+- create application for each microservice of your app (application configuration->name of the application->choose EC2 compute platform (EC2/onpremises,ECS and lambda)
+- click on create application
+- create an EC2 instance with tags on EC2 dashboard
+- Install codedeploy agent on this EC2 service https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-ubuntu.html
+- Create a role for EC2 to access AWS CodeDeploy service ,To attach the role to EC2->choose security ->role->update IAM
+- restart the code-deploy agent service
+- Create Deploymen Group for AWS CodeDeploy (enter name,service role with access to EC2,deployment type like blue/green or choose plain simple way,choose EC2 as enviorment with tags
+- create deployment group
+- Now create the Deployment for your application->(name, your application is hosted on GitHub,create deployment done)
+- appspec.yaml has to be at the root of your repository
+
+AWS Continuous Integration Demo
