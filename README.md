@@ -1,5 +1,9 @@
 # AWS-Project1
-# AWS Continuous Integration Demo
+# AWS Continuous Integration and Continuous Deployment Demo
+GitHub
+AWS CodeBuild
+AWS CodeDeploy
+AWS CodePipeline
 
 ## Set Up GitHub Repository
 
