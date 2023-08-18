@@ -2,7 +2,6 @@
 set -e
 
 # Pull the Docker image from Docker Hub
-echo
-
+docker pull shalinder/simple-python-flask-app:latest
 # Run the Docker image as a container
-echo
+docker run -d -p 5000:5000 shalinder/simple-python-flask-app:latest
