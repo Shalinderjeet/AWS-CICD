@@ -72,6 +72,6 @@ Choose AWS CodeDeploy service
 - Create Deploymen Group for AWS CodeDeploy (enter name,service role with access to EC2,deployment type like blue/green or choose plain simple way,choose EC2 as enviorment with tags
 - create deployment group
 - Now create the Deployment for your application->(name, your application is hosted on GitHub,create deployment done)
-- appspec.yaml has to be at the root of your repository
+- appspec.yaml has to be at the root of your repository.
 
 AWS Continuous Integration Demo
